@@ -75,6 +75,11 @@ while ~isempty(email_contents)
        continue;
     end
 
+    idx = find(strcmp(vocabList, str));
+    if ~isempty(idx)
+    	word_indices = [word_indices; idx];
+    end
+
     % Look up the word in the dictionary and add to word_indices if
     % found
     % ====================== YOUR CODE HERE ======================
@@ -96,15 +101,6 @@ while ~isempty(email_contents)
     % Note: You can use strcmp(str1, str2) to compare two strings (str1 and
     %       str2). It will return 1 only if the two strings are equivalent.
     %
-
-
-
-
-
-
-
-
-
 
     % =============================================================
 
